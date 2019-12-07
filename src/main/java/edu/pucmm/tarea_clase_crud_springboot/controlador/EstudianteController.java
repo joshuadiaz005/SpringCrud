@@ -32,15 +32,6 @@ public class EstudianteController {
         return "crearEditar";
     }
 
-    /*@PostMapping("/procesarEstudiante")
-    public String procesarEstudiante(Model modelo,
-                                     @RequestParam("matricula") int matricula,
-                                     @RequestParam String nombre){
-        System.out.println("Matricula: "+matricula);
-        System.out.println("Nombre: "+nombre);
-        //
-        return "redirect:/estudiante//";
-    }*/
 
     @PostMapping(path = "/procesarEstudiante", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     public String parsearEstudianteFormulario(Estudiante estudiante){
